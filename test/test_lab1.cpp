@@ -71,7 +71,7 @@ TEST(task1,comp6)
     
         for(size_t i = 0; i < n; i++)
 	{
-		EXPECT_STREQ(expected[i].name, arr[i].name);
+		EXPECT_EQ(expected[i].name, arr[i].name);
 		EXPECT_EQ(expected[i].age,arr[i].age);
 	}
 }
