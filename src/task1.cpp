@@ -6,12 +6,12 @@ int comp1(const void *a, const void *b){
 }
 
 int comp2(const void *a, const void *b){
-    return *((double*)a) -*((double*)b);
+    return *((double*)a) - *((double*)b) < 0 ? -1 : 1;
 }
 
 int comp3(const void *_a, const void *_b){
-    char *a = (char*)_a;
-    char *b = (char*)_b;
+    char *a = *(char**)_a;
+    char *b = *(char**)_b;
     int a_sum = 0;
     int b_sum = 0;
     while (*a){
@@ -26,8 +26,8 @@ int comp3(const void *_a, const void *_b){
 }
 
 int comp4(const void *_a, const void *_b){
-    char *a = (char*)_a;
-    char *b = (char*)_b;
+    char *a = *(char**)_a;
+    char *b = *(char**)_b;
     int a_sum = 0;
     int b_sum = 0;
     while (*a){
@@ -42,8 +42,8 @@ int comp4(const void *_a, const void *_b){
 }
 
 int comp5(const void *_a, const void *_b){
-    char *a = (char*)_a;
-    char *b = (char*)_b;
+    char *a = *(char**)_a;
+    char *b = *(char**)_b;
     int a_sum = 0;
     int b_sum = 0;
     while (*a){
